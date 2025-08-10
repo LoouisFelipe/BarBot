@@ -1,0 +1,46 @@
+{
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs20",
+    "predeploy": [
+      "npm --prefix \\"$RESOURCE_DIR\\" run build"
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "host": "127.0.0.1",
+      "port": 9100
+    },
+    "firestore": {
+      "host": "127.0.0.1",
+      "port": 8100
+    },
+    "functions": {
+      "host": "127.0.0.1",
+      "port": 5100
+    },
+    "storage": {
+      "host": "127.0.0.1",
+      "port": 9200
+    },
+    "ui": {
+      "enabled": true,
+      "host": "127.0.0.1"
+    },
+    "singleProjectMode": true
+  }
+}

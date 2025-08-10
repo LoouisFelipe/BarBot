@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+/functions/node_modules
+
+# Build outputs
+/.next
+/functions/lib
+
+# Firebase
+/.firebase
+firebase-debug.log
+storage.rules.log
+
+# Local files
+.env.local
+service-account-file.json
+
+# IDE config
+.vscode/
+.idx/
